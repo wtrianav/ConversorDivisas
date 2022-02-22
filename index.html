@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de divisas</title>
+    <link rel="stylesheet" href="./style.css" />
+
+</head>
+
+<body onLoad ="loadCurrencies();">
+    <main class="">
+        <div class="container">
+            <div class="titles">
+                <h1>Conversor de divisas</h1>
+                <h2>Valores y Servicios</h2>
+            </div>
+            <div class="box-inline">
+                <label class="name-label" for="name">Valor a convertir</label>
+                <input type="text" name="name" id="amount" class="form-control" placeholder="Cantidad de dinero" required="" />
+            </div>
+            <div class="boxes">
+                <div class="box-inline">
+                    <label class="name-label" for="name">Convertir de:</label>
+                    <select class="form-control" name="from-currency" id="from-currency">
+                        <option value="">Seleccione una moneda...</option>
+                    </select>
+                </div>
+                <div class="box-inline">
+                    <label class="name-label" for="name">Convertir a:</label>
+                    <select class="form-control" name="to-currency" id="to-currency">
+                        <option value="">Seleccione una moneda...</option>
+                    </select>
+                </div>
+            </div>
+            <div class="box-inline">
+                <button onClick="convertCurrency()" id="submit" class="submit-button">Convertir</button>
+            </div>
+            <div class="box-inline">
+                <p class="result">
+                    <span id="resultado"></span>
+                </p>
+            </div>
+        </div>
+    </main>
+    <script src="./functions.js"></script>
+</body>
+
+</html>
